@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSKAR Print</title>
+    
+
+    <style class="text/css">
+
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap');
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            position: absolute;
+            width: 1400px;
+            height: 72px;
+            left: 0px;
+            right: 0px;
+            background: #FFFFFF;
+        }
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 0px;
+            position: static;
+            width: 1040px;
+            height: 72px;
+            left: calc(50% - 1040px/2);
+            top: 0px;
+            background: #FFFFFF;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 10px 0px;
+        }
+
+        .Frame96 {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0px;
+            position: static;
+            width: 724.31px;
+            height: 48px;
+            left: 306.69px;
+            top: 12px;
+            flex: none;
+            order: 1;
+            flex-grow: 1;
+            margin: 0px 99px;
+        }
+
+        .Frame170 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 16px;
+            position: static;
+            width: 60px;
+            height: 25px;
+            left: 654.31px;
+            top: 0px;
+            background: linear-gradient(180deg, #353A8C 0%, #2A5AA2 100%);
+            border-radius: 51px;
+            flex: none;
+            order: 4;
+            flex-grow: 0;
+            margin: 0px 24px;
+        }
+
+        .cart {
+            position: static;
+            width: 17px;
+            height: 16px;
+            left: 37px;
+            top: 16px;
+            color: #FFFFFF;
+            order: 1;
+            flex: none;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+
+        .T {
+            position: static;
+            width: 11px;
+            height: 16px;
+            left: 16px;
+            top: 16px;
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #FFFFFF;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+
+        .buttons1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 16px;
+            position: static;
+            width: 93px;
+            height: 32px;
+            left: 537.31px;
+            top: 8px;
+            background: #FFFFFF;
+            border-radius: 4px;
+            flex: none;
+            order: 3;
+            flex-grow: 0;
+            margin: 0px 24px;
+        }
+
+        .login1 {
+            position: static;
+            left: 17.2%;
+            right: 17.2%;
+            top: 25%;
+            bottom: 25%;
+            font-family: 'Libre Franklin';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #353A8D;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 16px;
+        }
+
+        .buttons2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 16px;
+            position: static;
+            width: 113px;
+            height: 32px;
+            left: 400.31px;
+            top: 8px;
+            background: #FFFFFF;
+            border-radius: 4px;
+            flex: none;
+            order: 2;
+            flex-grow: 0;
+            margin: 0px 24px;
+        }
+
+        .login2 {
+            position: static;
+            left: 14.16%;
+            right: 14.16%;
+            top: 25%;
+            bottom: 25%;
+            font-family: 'Libre Franklin';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #353A8D;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 16px;
+        }
+
+        .buttons3 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 16px;
+            position: static;
+            width: 95px;
+            height: 32px;
+            left: 281.31px;
+            top: 8px;
+            background: #FFFFFF;
+            border-radius: 4px;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 0px 24px;
+        }
+
+        .login3 {
+            position: static;
+            left: 16.84%;
+            right: 16.84%;
+            top: 25%;
+            bottom: 25%;
+            font-family: 'Libre Franklin';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #353A8D;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 16px;
+        }
+
+        .buttons4 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 16px;
+            position: static;
+            width: 90px;
+            height: 32px;
+            left: 167.31px;
+            top: 8px;
+            background: #FFFFFF;
+            border-radius: 4px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 24px;
+        }
+
+        .login4 {
+            position: static;
+            left: 17.78%;
+            right: 17.78%;
+            top: 25%;
+            bottom: 25%;
+            font-family: 'Libre Franklin';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #353A8D;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 16px;
+        }
+
+        .logo {
+            width: 207.69px;
+            height: 40px;
+            top: 16px;
+            position: static;
+            left: 0%;
+            right: 79.86%;
+            top: 22.22%;
+            bottom: 22.22%;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 99px;
+        }
+
+        .frame94 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            position: absolute;
+            width: 207.69px;
+            height: 40px;
+            left: 0px;
+            top: 16px;
+            margin: 0px 134px;
+        }
+
+        .vector {
+            position: static;
+            left: 21.21%;
+            right: 0%;
+            top: 28.75%;
+            /* background: #222549; */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 0px 8px;
+        }
+
+        .group1 {
+            position: static;
+            left: 0%;
+            right: 82.64%;
+            top: 0%;
+            bottom: 0%;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 8px;
+        }
+
+        .vector2 {
+            position: absolute;
+            left: 0%;
+            right: 82.64%;
+            top: 0%;
+            bottom: 0%;
+            background: #222549;
+        }
+
+        .group2 {
+            position: absolute;
+            left: 4.52%;
+            right: 87.16%;
+            top: 25.09%;
+            bottom: 25.09%;
+        }
+
+        .vector3 {
+            position: absolute;
+            left: 8.68%;
+            right: 87.16%;
+            top: 37.49%;
+            bottom: 25.09%;
+            background: #009FE3;
+        }
+
+        .vector4 {
+            position: absolute;
+            left: 6.62%;
+            right: 89.26%;
+            top: 31.52%;
+            bottom: 31.55%;
+            background: #E6007E;
+        }
+
+        .vector5 {
+            position: absolute;
+            left: 4.52%;
+            right: 91.32%;
+            top: 25.09%;
+            bottom: 37.64%;
+            background: #FFED00;
+        }
+
+        .rectangle39 {
+            position: absolute;
+            height: 73px;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            background: #9C9DB2;
+            opacity: 0.3;
+            border-radius: 0px;
+        }
+
+        .breadcrumbs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0px;
+            position: absolute;
+            width: 1033px;
+            height: 56px;
+            left: 182px;
+            top: 72px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .frame50 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 8px;
+            position: static;
+            width: 1033px;
+            height: 56px;
+            left: 0px;
+            top: 0px;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+            margin: 24px 0px;
+        }
+
+        .frame56 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 8px 16px 8px 0px;
+            position: static;
+            width: 102px;
+            height: 40px;
+            left: 48px;
+            top: 8px;
+            background: white;
+            border-radius: 4px;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+
+        .produse {
+            position: static;
+            width: 55px;
+            height: 15px;
+            left: 31px;
+            top: 12.5px;
+            font-family: 'Libre Franklin';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: #353A8D;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 0px 0px;
+        }
+
+        .buttonicon {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            position: static;
+            width: 31px;
+            height: 32px;
+            left: 31px;
+            top: 4px;
+            /* background: #FFFFFF; */
+            border-radius: 4px;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 0px;
+        }
+
+        .loginicon {
+            position: static;
+            left: 25.81%;
+            right: 25.81%;
+            top: 25%;
+            bottom: 25%;
+            font-family: 'FontAwesome';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #353A8D;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 16px;
+        }
+
+        .buttonicon2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            position: static;
+            width: 30px;
+            height: 32px;
+            left: 38px;
+            top: 12px;
+            background: #FFFFFF;
+            border-radius: 4px;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+
+        .loginicon2 {
+            position: static;
+            left: 26.67%;
+            right: 26.67%;
+            top: 25%;
+            bottom: 25%;
+            font-family: 'FontAwesome';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #353A8D;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 16px;
+        }
+
+        .frame162 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 5px;
+            position: absolute;
+            width: 1036px;
+            height: 344px;
+            left: 182px;
+            top: 160px;
+
+        }
+
+        .productcard2 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px 0px  8px;
+            position: static;
+            width: 331px;
+            height: 344px;
+            left: 352px;
+            top: 0px;
+            background: #FFFFFF;
+            border: 1px solid #e1e1ea;
+            box-sizing: border-box;
+            border-radius: 8px; 
+        }
+
+        .component37 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            position: static;
+            width: 331px;
+            height: 128px;
+            left: 0px;
+            top: 208px;
+            background: #FFFFFF;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+            margin: 8px 0px;
+        }
+
+        .frame17 {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 8px 32px 8px 16px;
+            position: static;
+            width: 331px;
+            height: 46px;
+            left: 0px;
+            top: 82px;
+            border-radius: 0px 0px 8px 8px;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+            margin: 8px 0px;
+        }
+
+        .frame10 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 16px;
+            position: static;
+            width: 48px;
+            height: 30px;
+            left: 251px;
+            top: 8px;
+            background: #FFFFFF;
+            border-radius: 16px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 16px;
+        }
+
+        .vecto {
+            position: static;
+            left: 66.67%;
+            right: 0%;
+            top: 73.33%;
+            bottom: -20%;
+            background: #FFFFFF;
+            transform: rotate(-180deg);
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+
+        .frame3 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px 8px 0px 16px;
+            position: static;
+            width: 331px;
+            height: 74px;
+            left: 0px;
+            top: 0px;
+            text-decoration: none;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+            margin: 8px 0px;
+        }
+
+        .aliquam {
+            position: static;
+            width: 307px;
+            height: 44px;
+            left: 16px;
+            top: 30px;
+            font-family: 'Libre Franklin';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 22px;
+            text-decoration: none;
+            color: #60627D;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+            margin: 8px 0px;
+        }
+
+        .name {
+            position: static;
+            width: 307px;
+            height: 22px;
+            left: 16px;
+            top: 0px;
+            font-family: 'libre franklin';
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            text-decoration: none;
+            color: #353A8D;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+            margin: 8px 0px ;
+        }
+
+        .frame2 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 10px;
+            position: static;
+            width: 331px;
+            height: 200px;
+            left: 0px;
+            top: 0px;
+            border-radius: 8px 8px 0px 0px;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+            margin: 8px 0px;
+        }
+
+        .pictures {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            position: static;
+            width: 250px;
+            left: 200px;
+            left: 0px;
+            top: 0px;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 1;
+            margin: 0px 10px;
+        }
+
+        .rectangle1 {
+            position: static;
+            width: 160px;
+            height: 200px;
+            left: 0px;
+            top: 0px;
+            background: url(.jpg);
+            flex: none;
+            order: 0;
+            flex-grow: 1;
+            margin: 0px 10px;
+        }
+
+        .productcard3 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px 0px 8px;
+            position: static;
+            width: 331px;
+            height: 344px;
+            left: 704px;
+            top: 0px;
+            background: #FFFFFF;
+            border-radius: 1px solid #e1e1ea;
+            box-sizing: border-box;
+            border-radius: 8px;
+            flex: none;
+            order: 2;
+            flex-grow: 0;
+            margin: 0px 21px;
+        }
+
+        .group23 {
+            position: absolute;
+            width: 1034px;
+            height: 327px;
+            left: 184px;
+            top: 610px;
+        }
+
+        .rectangle73 {
+            position: absolute;
+            width: 420px;
+            height: 327px;
+            left: 575px;
+            top: 10px;
+            background: url(rama.jpg);
+        }
+
+        .descriere {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px 24px 0px 0px;
+            position: absolute;
+            width: 595px;
+            height: 224px;
+            left: 184px;
+            top: 610px;
+        }
+
+        .frame86 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            position: static;
+            width: 571px;
+            height: 176px;
+            left: 0px;
+            top: 48px;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+            margin: 16px 0px;
+        }
+        .maurius {
+            position: static;
+            width: 571px;
+            height: 176px;
+            left: 0px;
+            top: 0px;
+            font-family: 'libre franklin';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            color: #36385A;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+            margin: 8px 0px;
+        }
+
+        .frame174 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            position: static;
+            width: 426px;
+            height: 32px;
+            left: 0px;
+            top: 0px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 16px 0px;
+        }
+
+        .text {
+            position: static;
+            width: 388px;
+            height: 32px;
+            left: 38px;
+            top: 0px;
+            font-family: 'libre franklin';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 21px;
+            line-height: 32px;
+            color: #36385A;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 0px 16px;
+        }
+
+        .frame161 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            position: absolute;
+            width: 1400px;
+            height: 244px;
+            left: 0px;
+            top: 1049px;
+            background: #F8F8F9;
+        }
+
+        .frame141 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            position: static;
+            width: 1140px;
+            height: 27px;
+            left: calc(50% - 1140px/2);
+            top: calc(50% - 27px/2 + 108.5px);
+            background: #F8F8F9;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 0px 0px;
+        }
+
+        .copyright {
+            position: static;
+            width: 225px;
+            height: 11px;
+            left: 457.5px;
+            top: 8px;
+            font-family: 'libre Franklin';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 9px;
+            line-height: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #60627D;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+
+        .frame71 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 24px 56px;
+            position: static;
+            width: 1140px;
+            height: 217px;
+            left: calc(50% - 1140px/2);
+            top: calc(50% - 217px/2 - 13.5px);
+            background: #F8F8F9;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 0px;
+        }
+
+        .frame73 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            position: static;
+            width: 288px;
+            height: 148px;
+            left: 796px;
+            top: 24px;
+            flex: none;
+            order: 3;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+
+        .frame75 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            position: static;
+            width: 279px;
+            height: 62px;
+            left: 0px;
+            top: 86px;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 24px 0px;
+        }
+
+        .frame72 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            position: static;
+            width: 214px;
+            height: 32px;
+            left: 0px;
+            top: 30px;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 8px 0px;
+        }
+
+        .icon {
+            position: static;
+            width: 32px;
+            height: 32px;
+            left: 182px;
+            top: 0px;
+            flex: none;
+            order: 2;
+            flex-grow: 0;
+            margin: 0px 59px;
+        }
+
+        .text1 {
+            position: static;
+            width: 279px;
+            height: 22px;
+            left: 0px;
+            top: 0px;
+            font-family: 'libre franklin';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            color: #60627D;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 8px 0px;
+        }
+
+        .frame74 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            position: static;
+            width: 288px;
+            height: 62px;
+            left: 0px;
+            top: 0px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 24px 0px;
+        }
+
+        .frame66 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            position: static;
+            width: 190px;
+            height: 32px;
+            left: 0px;
+            top: 30px;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 8px 0px;
+        }
+
+        .rectangle38 {
+            position: static;
+            width: 366px;
+            height: 113px;
+            left: 420px;
+            top: 24px;
+            flex: none;
+            order: 2;
+            flex-grow: 1;
+            margin: 0px 10px;
+        }
+
+        .frame69 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            position: static;
+            width: 354px;
+            height: 172px;
+            left: 56px;
+            top: 24px;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+
+        .frame68 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            position: static;
+            width: 177px;
+            height: 142px;
+            left: 177px;
+            top: 0px;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 0px 72px;
+        }
+
+        .frame67 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            position: static;
+            width: 105px;
+            height: 172px;
+            left: 0px;
+            top: 0px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 72px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="Frame96">
+
+                <div class="Frame170">
+                    <img class="cart" src="shopping-cart-solid.svg">
+                    <span class="T">2</span>
+                </div>
+
+                <div class="buttons1">
+                    <div class="login1">Contact</div>
+                </div>
+
+                <div class="buttons2">
+                    <div class="login2">Despre noi</div>
+                </div>
+
+                <div class="buttons3">
+                    <a class="login3" href="index2.html" style="text-decoration: none;">Produse</a>
+                </a>
+                    <!-- <div class="login3">Produse</div> -->
+                </div>
+
+                <div class="buttons4">
+                    <div class="login4">Servicii</div>
+                </div>
+
+                
+            </div>
+
+            <div class="logo">
+                <div class="frame94">
+                    <div class="vector">OSKAR PRINT</div>
+                    
+                    <div class="group1">
+                        <div class="vector2"></div>
+                        <div class="group2">
+                            <div class="vector3"></div>
+                            <div class="vector4"></div>
+                            <div class="vector5"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="breadcrumbs">
+            <div class="frame50">
+                <div class="frame56">
+                    <div class="produse">Produse</div>
+                    <div class="buttonicon">
+                        <img src="home-solid.svg">
+                    </div>
+
+                    <div class="buttonicon2">
+                        <img src="arrow-right-solid.svg">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="frame162">
+
+            <div class="productcard2">
+                <div class="component37">
+
+                    <div class="frame17">
+                        <div class="frame10">
+                            <div class="vecto"></div>
+                        </div>
+                    </div>
+
+                    <div class="frame2">
+                        <div class="pictures">
+                            <img class="rectangle1" src="rama.jpg"> 
+                        </div>
+                    </div>
+
+                    <a href="index2.html" style="text-decoration: none;">
+                        <div class="frame3">
+                        <div class="aliquam">Alege din modelele preferate in functie de marime, culoare si material</div>
+                        <div class="name">Album foto</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            
+
+            <div class="productcard2">
+                <div class="component37">
+                    <div class="frame17">
+                        <div class="frame10">
+                            <div class="vecto"></div>
+                        </div>
+                    </div>
+
+                    <div class="frame2">
+                        <div class="pictures">
+                            <img class="rectangle1" src="Ramefoto.jpg"> 
+                        </div>
+                    </div>
+
+                    <a href="index2.html" style="text-decoration: none;">
+                        <div class="frame3">
+                            <div class="aliquam"> Doua dimensiuni de rame  de lemn pentru un look simplu si elegant</div>
+                            <div class="name">Rame</div>
+                        </div>
+                     </a>
+                </div>
+            </div>
+
+            <div class="productcard2">
+                <div class="component37">
+
+                    <div class="frame17">
+                        <div class="frame10">
+                            <div class="vecto"></div>
+                        </div>
+                    </div>
+
+                    <div class="frame2">
+                        <div class="pictures">
+                            <img class="rectangle1" src="personalizate.jpg"> 
+                        </div>
+                    </div>
+
+                    <a href="index2.html" style="text-decoration: none;">
+                        <div class="frame3">
+                            <div class="aliquam">Doua dimensiuni de rame de lemn pentru un look simplu si elegant</div>
+                            <div class="name">Produse personalizate</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="group23">
+
+            <img class="rectangle73" src="Rectangle 73.png" alt="">
+            
+
+                <div class="decriere">
+
+                    <div class="frame174">
+                        <div class="text">Despre produse in general</div>
+                    </div>
+
+                    <div class="frame86">
+                        <div class="maurius">Nam et mauris sit amet velit vestibulum sagittis. Maecenas in tellus turpis. Fusce posuere id sapien id tincidunt. Morbi egestas aliquam cursus. Ut feugiat, ex dictum imperdiet molestie, magna risus lobortis ex, eget egestas nibh lectus a nibh. Mauris ultrices leo sed quam rutrum congue. Integer felis sem, tempor eget scelerisque at, molestie nec est.
+
+                            Nam et mauris sit amet velit vestibulum sagittis. Maecenas in tellus turpis. Fusce posuere id sapien id tincidunt. Morbi egestas aliquam cursus.</div>
+                    </div>
+
+                </div>
+        </div>
+
+        <div class="frame161">
+
+            <div class="frame141">
+                <div class="copyright">COPYRIGHT © 2021 BRAND PALETTES </div>
+            </div>
+
+            <div class="frame71">
+                <div class="frame73">
+                    <div class="frame75">
+
+                        <div class="frame72">
+                            <img class="icon" src="email.svg">
+                            <img class="icon" src="whatsapp.svg">
+                            <img class="icon" src="facebook-messenger-brands.svg">
+                        </div>
+
+                        <span class="text1">Poti comanda oricand pe urmatoarele</span>
+                    </div>
+
+                    <div class="frame74">
+
+                        <div class="frame66">
+                            <img class="icon " src="facebook.svg">
+                            <img class="icon" src="instagram.svg">
+                            <img class="icon" src="twitter.svg">
+                        </div>
+                        <span class="text1">Momentele noastre le impartim si pe</span>
+                    </div>
+                </div>
+
+                <div class="rectangle38"></div>
+
+                <div class="frame69">
+                    <div class="frame68">
+                        <span class="text1">Comenzi</span>
+                        <span class="text1">Retur</span>
+                        <span class="text1">Transport</span>
+                        <span class="text1">Termeni si conditii</span>
+                        <span class="text1">Suport</span>
+                    </div>
+
+                    <div class="frame67">
+                        <span class="text1">Magazin</span>
+                        <span class="text1">Servicii</span>
+                        <span class="text1">Produse</span>
+                        <span class="text1">Despre noi</span>
+                        <span class="text1">Contact</span>
+                        <span class="text1">Sitemap</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+    </div>
+
+</body>
+</html>
